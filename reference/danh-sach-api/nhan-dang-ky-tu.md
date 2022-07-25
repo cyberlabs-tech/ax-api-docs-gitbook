@@ -14,7 +14,10 @@ Nhận dạng văn bản chữ tiếng Việt
 {% endswagger-description %}
 
 {% swagger-parameter in="query" name="chartype" type="String" required="true" %}
-text| handwri| mix(mặc định).
+text: Chữ in
+
+handwri: Chữ viết tay \
+mix: Cả chữ in và chữ viết tay(mặc định).
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fileId" type="String" required="false" %}
