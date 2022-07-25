@@ -572,7 +572,7 @@ Mã định danh của api.
 {% endswagger %}
 
 {% hint style="warning" %}
-**Lưu ý**: Chỉ cần truyền hoặc `fileUrl`` `<mark style="background-color:yellow;">``</mark> hoặc `fileBase64`, nếu truyền cả 2 tham số thì ưu tiên xử lý `fileBase64`.
+**Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;">`fileUrl`</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>.
 {% endhint %}
 
 ## Ý nghĩa đầu ra
