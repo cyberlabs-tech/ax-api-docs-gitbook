@@ -60,3 +60,11 @@ chuỗi Base64 của PDF
 ```
 {% endswagger-response %}
 {% endswagger %}
+
+{% hint style="warning" %}
+**Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark>` `<mark style="color:yellow;">``</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>.
+{% endhint %}
+
+#### Thông tin trả về
+
+Kết quả trả về là một chuỗi `Base64` là PDF Searchable đầu ra.
