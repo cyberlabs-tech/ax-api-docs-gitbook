@@ -2,9 +2,9 @@
 
 Dive into the specifics of each API endpoint by checking out our complete documentation.
 
-## OCR
+## Pets
 
-Tất cả các API nhận dạng ký tự chữ in và chữ viết tay.
+All the methods associated with `CRUD`ing some pets. Which isn't as weird as it sounds:
 
 {% content-ref url="trich-xuat-thong-tin.md" %}
 [trich-xuat-thong-tin.md](trich-xuat-thong-tin.md)

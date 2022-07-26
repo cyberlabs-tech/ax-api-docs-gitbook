@@ -1,25 +1,62 @@
-# Users
+---
+description: Api cho phép chuyển đổi file imgae hoặc pdf thành PDF Searchable.
+---
 
-{% hint style="info" %}
-**Good to know:** All the methods shown below are synced to an example Swagger file URL and are kept up to date automatically with changes to the API.
-{% endhint %}
+# Tạo PDF Searchable
 
-## User actions
+## Cài đặt API
 
-{% swagger src="https://petstore.swagger.io/v2/swagger.json" path="/user/login" method="get" %}
-[https://petstore.swagger.io/v2/swagger.json](https://petstore.swagger.io/v2/swagger.json)
-{% endswagger %}
+{% swagger method="post" path="/ocr/pdfSearchable" baseUrl="https://axt.cyberapis.com" summary="Tạo PDF Searchable" %}
+{% swagger-description %}
+Nhận dạng văn bản chữ tiếng Việt
+{% endswagger-description %}
 
-{% swagger src="https://petstore.swagger.io/v2/swagger.json" path="/user/logout" method="get" %}
-[https://petstore.swagger.io/v2/swagger.json](https://petstore.swagger.io/v2/swagger.json)
-{% endswagger %}
+{% swagger-parameter in="query" name="chartype" type="String" required="true" %}
+text: Chữ in
 
-## Creating users
+handwri: Chữ viết tay \
+mix: Cả chữ in và chữ viết tay(mặc định).
+{% endswagger-parameter %}
 
-{% swagger src="https://petstore.swagger.io/v2/swagger.json" path="/user/createWithList" method="post" %}
-[https://petstore.swagger.io/v2/swagger.json](https://petstore.swagger.io/v2/swagger.json)
-{% endswagger %}
+{% swagger-parameter in="body" name="fileId" type="String" required="false" %}
+Mã file, xác định tính duy nhất của file đầu vào(có thể để trống).
+{% endswagger-parameter %}
 
-{% swagger src="https://petstore.swagger.io/v2/swagger.json" path="/user/createWithArray" method="post" %}
-[https://petstore.swagger.io/v2/swagger.json](https://petstore.swagger.io/v2/swagger.json)
+{% swagger-parameter in="body" name="fileUrl" type="String" %}
+Đường dẫn ảnh đầu vào.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileBase64" type="String" %}
+Định dạng kiểu dữ liệu trả về trong header.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileExtension" type="String" required="false" %}
+File đầu vào nhận các giá trị 
+
+`pdf`
+
+ và 
+
+`jpg`
+
+ (mặc định).
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-Sender" type="String" required="true" %}
+Mã định danh người gọi.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
+Mã định danh của api.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
+Định dạng kiểu dữ liệu trả về trong header.
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Thành công" %}
+```javascript
+chuỗi Base64 của PDF 
+```
+{% endswagger-response %}
 {% endswagger %}
