@@ -1,12 +1,10 @@
 ---
 description: Số hóa nét chữ Việt
+cover: .gitbook/assets/AX-1024x603.jpg
+coverY: 72.34782608695652
 ---
 
-# Về AX
-
-
-
-![](.gitbook/assets/AX-1024x603.jpg)
+# Introduction
 
 Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi số không còn là sự lựa chọn mà đã trở thành xu hướng tất yếu để doanh nghiệp Việt có thể đứng vững và cạnh tranh trên thị trường. Trong cuộc cách mạng đó, bài toán về nhận dạng bóc tách chữ viết tay tiếng Việt trong các tài liệu giấy được coi là một thách thức khó giải quyết nhất, cản trở công tác số hóa tài liệu trong hành trình tự động hóa quy trình của các đơn vị, tổ chức.
 
@@ -44,7 +42,7 @@ Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi
 
 ## AX làm được những gì?
 
-![Độ chính xác của công nghệ AX](.gitbook/assets/image.png)
+![Độ chính xác của công nghệ AX](<.gitbook/assets/image (6).png>)
 
 Bóc tách thông tin **tự động**, cho phép nhận dạng các file **ảnh** hoặc **pdf** sau đó tự động bóc tách các thông tin cần thiết trong những file đó:
 
