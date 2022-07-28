@@ -1,18 +1,20 @@
 # Table of contents
 
-* [Introduction](README.md)
-
-## Getting Started
-
-* [Quick Start](getting-started/quick-start.md)
+* [Giới thiệu](README.md)
 
 ## Tutorials
 
+* [CyberAPIs](tutorials/cyberapis.md)
 * [RapidAPI](tutorials/rapidapi/README.md)
   * [Đăng ký tài khoản RapidAPI](tutorials/rapidapi/dang-ky-tai-khoan-rapidapi.md)
   * [Dùng thử AX](tutorials/rapidapi/dung-thu-ax.md)
   * [Tích hợp AX vào mã nguồn](tutorials/rapidapi/tich-hop-ax-vao-ma-nguon.md)
   * [Theo dõi lưu lượng sử dụng](tutorials/rapidapi/theo-doi-luu-luong-su-dung.md)
+
+## FAQs
+
+* [Tích hợp](faqs/tich-hop.md)
+* [Giá bán](faqs/gia-ban.md)
 
 ## API Reference
 

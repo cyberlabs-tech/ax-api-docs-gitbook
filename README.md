@@ -4,7 +4,7 @@ cover: .gitbook/assets/AX-1024x603.jpg
 coverY: 72.34782608695652
 ---
 
-# Introduction
+# Giới thiệu
 
 Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi số không còn là sự lựa chọn mà đã trở thành xu hướng tất yếu để doanh nghiệp Việt có thể đứng vững và cạnh tranh trên thị trường. Trong cuộc cách mạng đó, bài toán về nhận dạng bóc tách chữ viết tay tiếng Việt trong các tài liệu giấy được coi là một thách thức khó giải quyết nhất, cản trở công tác số hóa tài liệu trong hành trình tự động hóa quy trình của các đơn vị, tổ chức.
 
@@ -23,9 +23,9 @@ Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi
   * Nhận dạng số viết tay rời rạc.
   * Nhận dạng số viết tay viết liền.
   * Nhận dạng chữ cái viết tay rời rạc.
-  * Nhận dạng Họ tên viết tay.
-  * Nhận dạng Địa chỉ viết tay.
-  * Nhận dạng Ngày tháng viết tay.
+  * Nhận dạng họ tên viết tay.
+  * Nhận dạng địa chỉ viết tay.
+  * Nhận dạng ngày tháng viết tay.
 * **OMR** (_Optical Mark Reading_ – Nhận dạng đánh dấu quang học)
   * Nhận dạng dấu tick.
   * Nhận dạng phiếu khảo sát.
@@ -46,21 +46,21 @@ Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi
 
 Bóc tách thông tin **tự động**, cho phép nhận dạng các file **ảnh** hoặc **pdf** sau đó tự động bóc tách các thông tin cần thiết trong những file đó:
 
-* Bóc tách thông tin Văn bản hành chính.
-* Bóc tách thông tin Chứng minh nhân dân, căn cước công dân, hộ chiếu.
+* Bóc tách thông tin văn bản hành chính.
+* Bóc tách thông tin chứng minh nhân dân, căn cước công dân, hộ chiếu.
 * Bóc tách thông tin bảng biểu, xuất excel.
 * Bóc tách thông tin lỗ khoan khổ giấy A0.
 * Bóc tách thông tin bảng biểu Mẫu than, xuất excel.
 * Bóc tách thông tin bảng biểu Mẫu đá, xuất excel.
 * Bóc tách thông tin bảng biểu Mẫu khí, xuất excel.
 * Bóc tách thông tin hợp đồng.
-* Bóc tách thông tin Báo cáo tài chính.
+* Bóc tách thông tin báo cáo tài chính.
 * Và còn nhiều biểu mẫu khác.
 
 Bóc tách thông tin **định nghĩa thông minh**, cho phép người dùng định nghĩa các vùng thông tin cần bóc tách, thiết lập các đặc điểm, các tính chất, các thông tin đặc trưng cho mỗi vùng thông tin đó (metadata). **AX** sẽ tự tính toán, nhận dạng và bóc tách các trường thông tin mà người dùng định nghĩa:&#x20;
 
-* Bóc tách Phiếu thông tin dân cư.
-* Bóc tách Phiếu thông tin khách hàng ngân hàng.
+* Bóc tách phiếu thông tin dân cư.
+* Bóc tách phiếu thông tin khách hàng ngân hàng.
 * Bóc tách các biểu mẫu viết tay tư pháp.
 
 ## Lợi ích khi sử dụng AX
@@ -77,4 +77,8 @@ Việc lưu trữ tài liệu giấy theo cách truyền thống mang lại nhi�
 
 ## Làm thế nào để sử dụng AX?
 
-TBD
+* Bạn có thể thử nghiệm nhanh các tính năng của AX tại [website demo](http://demo.ocr.vn:6886/).
+* Để tích hợp vào mã nguồn, bạn có thể chọn 1 trong 3 cách:
+  1. Sử dụng trực tiếp SDK cho ngôn ngữ .NET mà chúng tôi cung cấp. _Xin vui lòng_ [_liên hệ với chúng tôi_](https://cybereye.vn/lien-he/) _nếu bạn muốn chọn phương án sử dụng này._
+  2. [Đăng ký và sử dụng qua hạ tầng Cloud của Cyber Eye.](tutorials/cyberapis.md)
+  3. [Đăng ký và sử dụng AX trên RapidAPI.](tutorials/rapidapi/)
