@@ -13,8 +13,8 @@
 
 ## FAQs
 
-* [Tích hợp](faqs/tich-hop.md)
-* [Giá bán](faqs/gia-ban.md)
+* [Tích hợp](getting-started/quick-start.md)
+* [Chi phí](faqs/chi-phi.md)
 
 ## API Reference
 
