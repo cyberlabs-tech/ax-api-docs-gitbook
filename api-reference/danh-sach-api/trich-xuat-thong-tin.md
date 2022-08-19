@@ -337,7 +337,9 @@ File đầu vào nhận các giá trị
 
 #### Ví dụ ảnh đầu vào
 
-![ Mẫu văn bản hành chính](../../.gitbook/assets/cbimage.png)
+{% file src="../../.gitbook/assets/cbimage.png" %}
+Mẫu văn bản hành chính.
+{% endfile %}
 
 #### Ý nghĩa thông tin trả về
 
@@ -443,7 +445,13 @@ File đầu vào nhận các giá trị
 **Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>.
 {% endhint %}
 
-#### Thông tin trả về
+#### Ví dụ ảnh đầu vào
+
+{% file src="../../.gitbook/assets/CMND.png" %}
+Mẫu chứng minh nhân dân
+{% endfile %}
+
+#### Ý nghĩa thông tin trả về
 
 Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
@@ -752,7 +760,13 @@ File đầu vào nhận các giá trị
 **Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>.
 {% endhint %}
 
-#### Thông tin trả về
+#### Ví dụ ảnh đầu vào
+
+{% file src="../../.gitbook/assets/passport.png" %}
+Mẫu hộ chiếu
+{% endfile %}
+
+#### Ý nghĩa thông tin trả về
 
 Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
@@ -2771,7 +2785,29 @@ CMC: Nhận cha mẹ con
 **Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64.`</mark>
 {% endhint %}
 
-#### Thông tin trả về
+#### Ví dụ ảnh đầu vào
+
+{% file src="../../.gitbook/assets/cha me con.png" %}
+Mẫu cha mẹ con A4.
+{% endfile %}
+
+{% file src="../../.gitbook/assets/Hon Nhan (1).png" %}
+Mẫu hôn nhân A4.
+{% endfile %}
+
+{% file src="../../.gitbook/assets/ket hon.png" %}
+Mẫu kết hôn A4.
+{% endfile %}
+
+{% file src="../../.gitbook/assets/khai sinh (1).png" %}
+Mẫu khai sinh A4.&#x20;
+{% endfile %}
+
+{% file src="../../.gitbook/assets/Khai tu.png" %}
+Mẫu khai tử A4.
+{% endfile %}
+
+#### Ý nghĩa thông tin trả về
 
 Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
@@ -3768,9 +3804,11 @@ File đầu vào nhận các giá trị
 
 #### Ví dụ ảnh đầu vào
 
-![Mẫu bảo hiểm ô tô](../../.gitbook/assets/bao-hiem-tnds-o-to-500x300.jpg)
+{% file src="../../.gitbook/assets/bao-hiem-tnds-o-to-500x300.jpg" %}
+Mẫu bảo hiểm ô tô
+{% endfile %}
 
-#### Thông tin trả về
+#### Ý nghĩa thông tin trả về
 
 Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
