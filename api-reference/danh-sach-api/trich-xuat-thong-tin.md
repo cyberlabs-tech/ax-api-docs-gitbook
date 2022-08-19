@@ -6,9 +6,9 @@ description: >-
 
 # Trích xuất thông tin
 
-## **Văn bản hàn chính**
+## **Văn bản hành chính**
 
-{% swagger method="post" path="/ocr/processVbhc" baseUrl="https://axt.cyberapis.com" summary="Process VBHC" %}
+{% swagger method="post" path="/ocr/vbhc" baseUrl="https://ax.cyberapis.com" summary="Process VBHC" %}
 {% swagger-description %}
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
@@ -335,7 +335,11 @@ File đầu vào nhận các giá trị
 **Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark>` `<mark style="color:yellow;">``</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>.
 {% endhint %}
 
-#### Thông tin trả về
+#### Ví dụ ảnh đầu vào
+
+![ Mẫu văn bản hành chính](../../.gitbook/assets/cbimage.png)
+
+#### Ý nghĩa thông tin trả về
 
 Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
@@ -349,7 +353,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Chứng minh nhân dân
 
-{% swagger method="post" path="/ocr/processCmnd" baseUrl="https://axt.cyberapis.com" summary="Process CMND" %}
+{% swagger method="post" path="/ocr/cmnd" baseUrl="https://ax.cyberapis.com" summary="Process CMND" %}
 {% swagger-description %}
 API trả các thông tin như họ tên, giới tính, dân tộc, ngày sinh, hộ khẩu trường trú... của chứng minh nhân dân.
 {% endswagger-description %}
@@ -480,7 +484,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Hộ chiếu
 
-{% swagger method="post" path="/ocr/processPassport" baseUrl="https://axt.cyberapis.com" summary="Process Passport" %}
+{% swagger method="post" path="/ocr/passport" baseUrl="https://ax.cyberapis.com" summary="Process Passport" %}
 {% swagger-description %}
 API trả các thông tin như mã số, số, hộ chiếu, họ tên, quốc tịch, ngày sinh, giới tính... của hộ chiếu.
 {% endswagger-description %}
@@ -767,7 +771,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Hộ tịch
 
-{% swagger method="post" path="/ocr/processHoTich" baseUrl="https://axt.cyberapis.com" summary="Process HoTich" %}
+{% swagger method="post" path="/ocr/hotich" baseUrl="https://ax.cyberapis.com" summary="Process HoTich" %}
 {% swagger-description %}
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
@@ -2784,4 +2788,992 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 | `Confidence`     | number       | Độ chính xác nhận dạng                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `ValueInfos`     | array object | <table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><code>Text</code></td><td>Giá trị text của dòng (hoặc cụm).</td></tr><tr><td><code>Line</code></td><td>tự của dòng, bắt đầu bằng giá trị 0</td></tr><tr><td><code>X</code></td><td>Hoành độ điểm trên cùng bên trái của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Y</code></td><td>ng độ điểm trên cùng bên trái của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Width</code></td><td>Chiều rộng của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Height</code></td><td>Chiều cao của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>PageWidth</code></td><td>Chiều rộng của trang.</td></tr><tr><td><code>PageHeight</code></td><td>Chiều cao của trang.</td></tr><tr><td><code>LineConfidence</code></td><td>Độ chính xác của cả dòng <code>Text</code> (trong <code>LineInfo</code>).</td></tr></tbody></table> |
 
-##
+## Bảo hiểm oto
+
+{% swagger method="post" path="/ocr/auto-insurance" baseUrl="https://ax.cyberapis.com" summary="Process Insurance Car" %}
+{% swagger-description %}
+API trả về thông tin như chủ xe, địa chỉ, điên thoại, số biển kiểm soát,... của bảo hiểm xe oto. 
+{% endswagger-description %}
+
+{% swagger-parameter in="header" name="X-Sender" required="true" type="String" %}
+Mã định danh người gọi.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
+Mã định danh của api.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
+Định dạng kiểu dữ liệu trả về trong header.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileId" type="String" %}
+Mã file, xác định tính duy nhất của file đầu vào.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileUrl" type="String" %}
+Đường dẫn ảnh đầu vào.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileBase64" type="String" %}
+Định dạng kiểu dữ liệu trả về trong header
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="fileExtension" type="String" required="false" %}
+File đầu vào nhận các giá trị 
+
+`pdf`
+
+ và 
+
+`jpg`
+
+ (mặc định).
+{% endswagger-parameter %}
+
+{% swagger-response status="200: OK" description="Ví dụ thành công" %}
+```json
+{
+    "chuXe": {
+        "Text": "Cao Nguyễn Thị Dung",
+        "CharConfidences": [
+            0.9791895,
+            0.5355251,
+            0.9553844,
+            0.9953101,
+            0.9406395,
+            0.8474795,
+            0.9712649,
+            0.9999157,
+            0.9998648,
+            0.9999876,
+            0.99976784,
+            0.9998828,
+            0.999895334,
+            0.999923468,
+            0.9999968,
+            0.999797046,
+            0.972565055,
+            0.96215266,
+            0.9993025
+        ],
+        "WordConfidences": [
+            0.500985,
+            0.774086356,
+            0.9997016,
+            0.9349136
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.9791895,
+                0.5355251,
+                0.9553844
+            ],
+            "1": [
+                0.9406395,
+                0.8474795,
+                0.9712649,
+                0.9999157,
+                0.9998648,
+                0.9999876
+            ],
+            "2": [
+                0.9998828,
+                0.999895334,
+                0.999923468
+            ],
+            "3": [
+                0.999797046,
+                0.972565055,
+                0.96215266,
+                0.9993025
+            ]
+        },
+        "LineConfidence": 0.3607,
+        "X": 9,
+        "Y": 165,
+        "Width": 349,
+        "Height": 72,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "diaChi": {
+        "Text": "1/1101 - 06, T612, Cầu Dữu,Nam Từ Liên, HN",
+        "CharConfidences": [
+            0.362682462,
+            0.6836726,
+            0.9222262,
+            0.990473,
+            0.9501514,
+            0.764517069,
+            0.489169925,
+            0.983732045,
+            0.992239952,
+            0.8145468,
+            0.9984871,
+            0.9993699,
+            0.89714545,
+            0.5210123,
+            0.9429361,
+            0.953561246,
+            0.9990947,
+            0.9793011,
+            0.972268939,
+            0.99720335,
+            0.478924781,
+            0.999272048,
+            0.9999609,
+            0.734941363,
+            0.845711648,
+            0.5592707,
+            0.9804072
+        ],
+        "WordConfidences": [
+            0.1645261,
+            0.812802,
+            0.4583548,
+            0.477237731,
+            0.340803117
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.362682462,
+                0.6836726,
+                0.9222262,
+                0.990473,
+                0.9501514,
+                0.764517069
+            ],
+            "1": [
+                0.8145468,
+                0.9984871,
+                0.9993699
+            ],
+            "2": [
+                0.5210123,
+                0.9429361,
+                0.953561246,
+                0.9990947,
+                0.9793011
+            ],
+            "3": [
+                0.99720335,
+                0.478924781,
+                0.999272048
+            ],
+            "4": [
+                0.734941363,
+                0.845711648,
+                0.5592707,
+                0.9804072
+            ]
+        },
+        "LineConfidence": 0.00214157975,
+        "X": 11,
+        "Y": 235,
+        "Width": 353,
+        "Height": 126,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "dienThoai": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "soBienKiemSoat": {
+        "Text": "306-530.59",
+        "CharConfidences": [
+            0.9998319,
+            0.96327734,
+            0.999191463,
+            0.5590771,
+            0.7003723,
+            0.968336046,
+            0.9995851,
+            0.999979138,
+            0.9928767,
+            0.8962277,
+            0.998209953
+        ],
+        "WordConfidences": [
+            0.32454747
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.9998319,
+                0.96327734,
+                0.999191463,
+                0.5590771,
+                0.7003723,
+                0.968336046,
+                0.9995851,
+                0.999979138,
+                0.9928767,
+                0.8962277
+            ]
+        },
+        "LineConfidence": 0.324,
+        "X": 19,
+        "Y": 361,
+        "Width": 340,
+        "Height": 58,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "soKhung": {
+        "Text": "694617395606",
+        "CharConfidences": [
+            0.967887,
+            0.9944989,
+            0.8173856,
+            0.999845,
+            0.9999852,
+            0.8664919,
+            0.999673,
+            0.999936461,
+            0.999328256,
+            0.997834265,
+            0.9999707,
+            0.9999906
+        ],
+        "WordConfidences": [
+            0.6794021
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.967887,
+                0.9944989,
+                0.8173856,
+                0.999845,
+                0.9999852,
+                0.8664919,
+                0.999673,
+                0.999936461,
+                0.999328256,
+                0.997834265,
+                0.9999707,
+                0.9999906
+            ]
+        },
+        "LineConfidence": 0.6794,
+        "X": 16,
+        "Y": 421,
+        "Width": 348,
+        "Height": 58,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "soMay": {
+        "Text": "09203131960",
+        "CharConfidences": [
+            0.999982834,
+            0.9999491,
+            0.9981743,
+            0.999984741,
+            0.99987483,
+            0.9999753,
+            0.9973042,
+            0.930897,
+            0.69912225,
+            0.5939457,
+            0.8597544
+        ],
+        "WordConfidences": [
+            0.3307567
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.999982834,
+                0.9999491,
+                0.9981743,
+                0.999984741,
+                0.99987483,
+                0.9999753,
+                0.9973042,
+                0.930897,
+                0.69912225,
+                0.5939457,
+                0.8597544
+            ]
+        },
+        "LineConfidence": 0.3308,
+        "X": 17,
+        "Y": 479,
+        "Width": 343,
+        "Height": 55,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "namSanXuat": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "hangXe": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "loaiXe": {
+        "Text": "Muceder- Đen, GI1250",
+        "CharConfidences": [
+            0.9998299,
+            0.8742128,
+            0.944917262,
+            0.823624,
+            0.8582979,
+            0.9724826,
+            0.7238757,
+            0.725108445,
+            0.641866,
+            0.4280953,
+            0.4708027,
+            0.6690094,
+            0.331256121,
+            0.994138837,
+            0.9922769,
+            0.872732043,
+            0.5196758,
+            0.249206,
+            0.9400601,
+            0.9761109
+        ],
+        "WordConfidences": [
+            0.298025131,
+            0.0446658432,
+            0.102910466
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.9998299,
+                0.8742128,
+                0.944917262,
+                0.823624,
+                0.8582979,
+                0.9724826,
+                0.7238757,
+                0.725108445
+            ],
+            "1": [
+                0.4280953,
+                0.4708027,
+                0.6690094,
+                0.331256121
+            ],
+            "2": [
+                0.9922769,
+                0.872732043,
+                0.5196758,
+                0.249206,
+                0.9400601,
+                0.9761109
+            ]
+        },
+        "LineConfidence": 0.0009,
+        "X": 10,
+        "Y": 538,
+        "Width": 356,
+        "Height": 58,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "trongTai": {
+        "Text": "Muceder- Đen, GI1250",
+        "CharConfidences": [
+            0.9998299,
+            0.8742128,
+            0.944917262,
+            0.823624,
+            0.8582979,
+            0.9724826,
+            0.7238757,
+            0.725108445,
+            0.641866,
+            0.4280953,
+            0.4708027,
+            0.6690094,
+            0.331256121,
+            0.994138837,
+            0.9922769,
+            0.872732043,
+            0.5196758,
+            0.249206,
+            0.9400601,
+            0.9761109
+        ],
+        "WordConfidences": [
+            0.298025131,
+            0.0446658432,
+            0.102910466
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.9998299,
+                0.8742128,
+                0.944917262,
+                0.823624,
+                0.8582979,
+                0.9724826,
+                0.7238757,
+                0.725108445
+            ],
+            "1": [
+                0.4280953,
+                0.4708027,
+                0.6690094,
+                0.331256121
+            ],
+            "2": [
+                0.9922769,
+                0.872732043,
+                0.5196758,
+                0.249206,
+                0.9400601,
+                0.9761109
+            ]
+        },
+        "LineConfidence": 0.0009,
+        "X": 11,
+        "Y": 538,
+        "Width": 357,
+        "Height": 58,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "soChoNgoi": {
+        "Text": "05",
+        "CharConfidences": [
+            0.8624856,
+            0.0,
+            0.999995232,
+            0.999857664
+        ],
+        "WordConfidences": [
+            0.9998529
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.999995232,
+                0.999857664
+            ]
+        },
+        "LineConfidence": 0.8624,
+        "X": 12,
+        "Y": 602,
+        "Width": 364,
+        "Height": 54,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "mucDichSuDung": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "gioHieuLuc": {
+        "Text": "25h11",
+        "CharConfidences": [
+            0.701837242,
+            0.422786653,
+            0.876379,
+            0.7367432,
+            0.9761243,
+            0.0,
+            0.959429443,
+            0.999974251,
+            0.0,
+            0.999999642,
+            0.9999769,
+            0.0,
+            0.58360523,
+            0.99960047,
+            0.9999995
+        ],
+        "WordConfidences": [
+            0.187012613,
+            0.959404767,
+            0.9999765,
+            0.583371758
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.701837242,
+                0.422786653,
+                0.876379,
+                0.7367432,
+                0.9761243
+            ],
+            "1": [
+                0.959429443,
+                0.999974251
+            ],
+            "2": [
+                0.999999642,
+                0.9999769
+            ],
+            "3": [
+                0.58360523,
+                0.99960047,
+                0.9999995
+            ]
+        },
+        "LineConfidence": 0.1047,
+        "X": 413,
+        "Y": 78,
+        "Width": 360,
+        "Height": 45,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "gioKetThuc": {
+        "Text": "14h11",
+        "CharConfidences": [
+            0.999663353,
+            0.8655843,
+            0.5166193,
+            0.999956846,
+            0.0,
+            0.6033725,
+            0.8716613,
+            0.0,
+            0.999999762,
+            0.9999958,
+            0.0,
+            0.9686848,
+            0.868965,
+            0.999107063,
+            0.999995
+        ],
+        "WordConfidences": [
+            0.447007746,
+            0.5259365,
+            0.9999956,
+            0.840997338
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.999663353,
+                0.8655843,
+                0.5166193,
+                0.999956846
+            ],
+            "1": [
+                0.6033725,
+                0.8716613
+            ],
+            "2": [
+                0.999999762,
+                0.9999958
+            ],
+            "3": [
+                0.9686848,
+                0.868965,
+                0.999107063,
+                0.999995
+            ]
+        },
+        "LineConfidence": 0.1977,
+        "X": 410,
+        "Y": 123,
+        "Width": 370,
+        "Height": 53,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "ngayHieuLuc": {
+        "Text": "2359/14/2010",
+        "CharConfidences": [
+            0.999663353,
+            0.8655843,
+            0.5166193,
+            0.999956846,
+            0.0,
+            0.6033725,
+            0.8716613,
+            0.0,
+            0.999999762,
+            0.9999958,
+            0.0,
+            0.9686848,
+            0.868965,
+            1.0,
+            1.0,
+            0.999107063,
+            0.999995
+        ],
+        "WordConfidences": [
+            0.447007746,
+            0.5259365,
+            0.9999956,
+            0.840997338
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.999663353,
+                0.8655843,
+                0.5166193,
+                0.999956846
+            ],
+            "1": [
+                0.6033725,
+                0.8716613
+            ],
+            "2": [
+                0.999999762,
+                0.9999958
+            ],
+            "3": [
+                0.9686848,
+                0.868965,
+                0.999107063,
+                0.999995
+            ]
+        },
+        "LineConfidence": 0.1977,
+        "X": 415,
+        "Y": 123,
+        "Width": 363,
+        "Height": 52,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "ngayKetThuc": {
+        "Text": "2359/14/2011",
+        "CharConfidences": [
+            0.999663353,
+            0.8655843,
+            0.5166193,
+            0.999956846,
+            0.0,
+            0.6033725,
+            0.8716613,
+            0.0,
+            0.999999762,
+            0.9999958,
+            0.0,
+            0.9686848,
+            0.868965,
+            1.0,
+            1.0,
+            0.999107063,
+            0.999995
+        ],
+        "WordConfidences": [
+            0.447007746,
+            0.5259365,
+            0.9999956,
+            0.840997338
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.999663353,
+                0.8655843,
+                0.5166193,
+                0.999956846
+            ],
+            "1": [
+                0.6033725,
+                0.8716613
+            ],
+            "2": [
+                0.999999762,
+                0.9999958
+            ],
+            "3": [
+                0.9686848,
+                0.868965,
+                0.999107063,
+                0.999995
+            ]
+        },
+        "LineConfidence": 0.1977,
+        "X": 415,
+        "Y": 123,
+        "Width": 363,
+        "Height": 52,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "ngayNop": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "phiBaoHiem": {
+        "Text": "497000",
+        "CharConfidences": [
+            0.9999838,
+            0.9992749,
+            0.9876508,
+            0.8746454,
+            0.9999883,
+            0.99999094,
+            0.9999994
+        ],
+        "WordConfidences": [
+            0.863185465
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.9999838,
+                0.9992749,
+                0.9876508,
+                0.8746454,
+                0.9999883,
+                0.99999094,
+                0.9999994
+            ]
+        },
+        "LineConfidence": 0.8632,
+        "X": 412,
+        "Y": 249,
+        "Width": 349,
+        "Height": 45,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "phiBaoHiemPhaiNop": {
+        "Text": "910700",
+        "CharConfidences": [
+            0.654399455,
+            0.6125229,
+            0.998091042,
+            0.999785244,
+            0.9978067,
+            0.9994568,
+            0.990974,
+            0.7388075,
+            0.9224892,
+            0.993936241,
+            0.9998636,
+            0.999997258
+        ],
+        "WordConfidences": [
+            0.3988895,
+            0.677315056
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.654399455,
+                0.6125229,
+                0.998091042,
+                0.999785244,
+                0.9978067,
+                0.9994568
+            ],
+            "1": [
+                0.7388075,
+                0.9224892,
+                0.993936241,
+                0.9998636,
+                0.999997258
+            ]
+        },
+        "LineConfidence": 0.2677,
+        "X": 411,
+        "Y": 297,
+        "Width": 371,
+        "Height": 47,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "phiBaoHiemPhaiNop1": {
+        "Text": "0",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "phiBaoHiemPhaiNop2": {
+        "Text": "0",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "nguoiCap": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    },
+    "ngayCap": {
+        "Text": "24/11/0",
+        "CharConfidences": [
+            0.586705,
+            0.827689052,
+            0.0,
+            0.9999881,
+            0.999958038,
+            0.0,
+            0.5735699,
+            0.6947799,
+            0.999969,
+            0.983868361,
+            0.9996338,
+            0.9999919,
+            0.999939442,
+            0.0,
+            0.84710604,
+            0.933976054,
+            0.7050805,
+            0.450029731
+        ],
+        "WordConfidences": [
+            0.485609323,
+            0.9999461,
+            0.398504823,
+            0.9834405,
+            0.251046062
+        ],
+        "WordCharConfidences": {
+            "0": [
+                0.586705,
+                0.827689052
+            ],
+            "1": [
+                0.9999881,
+                0.999958038
+            ],
+            "2": [
+                0.5735699,
+                0.6947799
+            ],
+            "3": [
+                0.983868361,
+                0.9996338,
+                0.9999919,
+                0.999939442
+            ],
+            "4": [
+                0.84710604,
+                0.933976054,
+                0.7050805,
+                0.450029731
+            ]
+        },
+        "LineConfidence": 0.0478,
+        "X": 411,
+        "Y": 808,
+        "Width": 377,
+        "Height": 143,
+        "PageWidth": 1600,
+        "PageHeight": 1128,
+        "PageIndex": 0
+    },
+    "soPhieu": {
+        "Text": "",
+        "CharConfidences": [],
+        "WordConfidences": [],
+        "WordCharConfidences": {},
+        "LineConfidence": 0.0,
+        "X": 0,
+        "Y": 0,
+        "Width": 0,
+        "Height": 0,
+        "PageWidth": 0,
+        "PageHeight": 0,
+        "PageIndex": 0
+    }
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% hint style="warning" %}
+**Lưu ý**: Chỉ cần truyền hoặc <mark style="color:yellow;background-color:yellow;">`fileUrl`</mark> hoặc <mark style="color:yellow;background-color:yellow;">`fileBase64`</mark>, nếu truyền cả 2 tham số thì ưu tiên xử lý <mark style="color:yellow;background-color:yellow;">`fileBase64.`</mark>
+{% endhint %}
+
+#### Ví dụ ảnh đầu vào
+
+![Mẫu bảo hiểm ô tô](../../.gitbook/assets/bao-hiem-tnds-o-to-500x300.jpg)
+
+#### Thông tin trả về
+
+Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
+
+| Trường thông tin                         | Kiểu dữ liệu | Ghi chú                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tên các trường thông tin trong bảo hiểm. | object       | <table data-header-hidden><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><code>Text</code></td><td>Giá trị text của dòng (hoặc cụm).</td></tr><tr><td><code>X</code></td><td>Hoành độ điểm trên cùng bên trái của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Y</code></td><td>ng độ điểm trên cùng bên trái của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Width</code></td><td>Chiều rộng của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>Height</code></td><td>Chiều cao của dòng có chữa ký tự Tiếng Việt</td></tr><tr><td><code>PageWidth</code></td><td>Chiều rộng của trang.</td></tr><tr><td><code>PageHeight</code></td><td>Chiều cao của trang.</td></tr><tr><td><code>CharConfidences</code></td><td>Danh sách độ chính xác của các ký tự của giá trị <code>Text</code> (trong <code>LineInfo</code>).</td></tr><tr><td><code>WordConfidences</code></td><td>Danh sách độ chính xác của các từ của giá trị <code>Text</code> (trong <code>LineInfo</code>).</td></tr><tr><td><code>WordCharConfidences</code></td><td>Thông tin về độ chính xác của các ký tự của các từ. <em><strong>Key</strong></em> của thông tin này là chỉ số thứ tự của từ trong <code>Text</code>, <em><strong>Value</strong></em> là danh sách độ chính xác của các ký tự trong từ.</td></tr><tr><td><code>LineConfidence</code></td><td>Độ chính xác của cả dòng <code>Text</code> (trong <code>LineInfo</code>).</td></tr></tbody></table> |

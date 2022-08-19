@@ -6,7 +6,7 @@ description: Api cho phép chuyển đổi file imgae hoặc pdf thành PDF Sear
 
 ## Cài đặt API
 
-{% swagger method="post" path="/ocr/pdfSearchable" baseUrl="https://axt.cyberapis.com" summary="Tạo PDF Searchable" %}
+{% swagger method="post" path="/misc/pdf-searchable" baseUrl="https://ax.cyberapis.com" summary="Tạo PDF Searchable" %}
 {% swagger-description %}
 Nhận dạng văn bản chữ tiếng Việt
 {% endswagger-description %}
