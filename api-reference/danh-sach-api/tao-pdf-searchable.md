@@ -42,16 +42,8 @@ File đầu vào nhận các giá trị
  (mặc định).
 {% endswagger-parameter %}
 
-{% swagger-parameter in="header" name="X-Sender" type="String" required="true" %}
+{% swagger-parameter in="header" name="Authorization" type="String" required="true" %}
 Mã định danh người gọi.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
-Mã định danh của api.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
-Định dạng kiểu dữ liệu trả về trong header.
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Thành công" %}

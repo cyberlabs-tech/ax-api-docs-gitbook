@@ -13,16 +13,8 @@ description: >-
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-Sender" required="true" type="String" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
 Mã định danh người gọi.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
-Mã định danh của api.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
-Định dạng kiểu dữ liệu trả về trong header.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fileId" type="String" %}
@@ -360,16 +352,8 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 API trả các thông tin như họ tên, giới tính, dân tộc, ngày sinh, hộ khẩu trường trú... của chứng minh nhân dân.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-Sender" required="true" type="String" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
 Mã định danh người gọi.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
-Mã định danh của api.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
-Định dạng kiểu dữ liệu trả về trong header.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fileId" type="String" %}
@@ -497,16 +481,8 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 API trả các thông tin như mã số, số, hộ chiếu, họ tên, quốc tịch, ngày sinh, giới tính... của hộ chiếu.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-Sender" required="true" type="String" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
 Mã định danh người gọi.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
-Mã định danh của api.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
-Định dạng kiểu dữ liệu trả về trong header.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fileId" type="String" %}
@@ -790,16 +766,8 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
 
-{% swagger-parameter in="header" name="X-Sender" required="true" type="String" %}
+{% swagger-parameter in="header" name="Authorization" required="true" type="String" %}
 Mã định danh người gọi.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="X-APIKey" type="String" required="true" %}
-Mã định danh của api.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="header" name="Content-Type" type="String" required="true" %}
-Định dạng kiểu dữ liệu trả về trong header.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fileId" type="String" %}
