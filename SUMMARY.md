@@ -13,7 +13,6 @@
 
 ## FAQs
 
-* [Tích hợp](getting-started/quick-start.md)
 * [Chi phí](faqs/chi-phi.md)
 
 ## API Reference

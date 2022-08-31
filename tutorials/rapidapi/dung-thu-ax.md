@@ -6,7 +6,7 @@ Bạn có thể truy cập bằng một trong các cách sau:
 
 * Tìm kiếm trên [trang chợ APIs](https://rapidapi.com/hub) với từ khóa `vietnam ocr` và click vào kết quả đầu tiên.
 
-![Search "vietnam ocr"](../../.gitbook/assets/image.png)
+![Search "vietnam ocr"](<../../.gitbook/assets/image (16).png>)
 
 * hoặc truy cập đường dẫn [trực tiếp](https://rapidapi.com/cybereyetech/api/cyber-eye-ocr-handwritting-recognition/).
 
@@ -37,7 +37,7 @@ Bạn có thể chọn bất kỳ endpoint nào để trải nghiệm thử côn
 
 Các file cần nhận dạng thường là file ảnh hoặc pdf. Để chuẩn hóa đầu vào, các tính năng nhận dạng AX cung cấp có chung định dạng là `base64` của file ảnh hoặc pdf. Do đó, trước khi thực hiện request, bạn cần encode file thành dạng base64.
 
-![Điền tham số request](<../../.gitbook/assets/image (5).png>)
+![Điền tham số request](<../../.gitbook/assets/image (5) (1).png>)
 
 Sau khi điền đủ tham số, bạn có thể bấm nút **Test Endpoint** để nhận kết quả trả về từ AX.
 
@@ -53,4 +53,4 @@ Tùy từng endpoint, thời gian trả về kết quả có thể tử vài tr�
 
 Kết quả trả về body có dạng json bao gồm các thông tin nhận dạng được kèm độ tin cậy của từng trường thông tin.
 
-![response's body](<../../.gitbook/assets/image (4).png>)
+![response's body](<../../.gitbook/assets/image (4) (1).png>)

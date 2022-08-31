@@ -42,7 +42,7 @@ Trước làn sóng cách mạng công nghiệp lần thứ tư, chuyển đổi
 
 ## AX làm được những gì?
 
-![Độ chính xác của công nghệ AX](<.gitbook/assets/image (6).png>)
+![Độ chính xác của công nghệ AX](<.gitbook/assets/image (6) (1).png>)
 
 Bóc tách thông tin **tự động**, cho phép nhận dạng các file **ảnh** hoặc **pdf** sau đó tự động bóc tách các thông tin cần thiết trong những file đó:
 

@@ -15,13 +15,13 @@
 * Xác nhận Captcha.
 * Bấm **Sign Up**.
 
-![Register an account](<../../.gitbook/assets/image (11).png>)
+![Register an account](<../../.gitbook/assets/image (11) (1).png>)
 
 ## Xác nhận đăng ký
 
 Sau khi đăng ký, RapidAPI sẽ gửi mail xác nhận tới email bạn sử dụng khi đăng ký. Sử dụng 6 chữ số được cấp trong nội dung mail để điền vào giao diện xác nhận.
 
-![Validate your account](<../../.gitbook/assets/image (7).png>)
+![Validate your account](<../../.gitbook/assets/image (7) (1).png>)
 
 ## Đăng nhập
 
