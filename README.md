@@ -77,8 +77,8 @@ Việc lưu trữ tài liệu giấy theo cách truyền thống mang lại nhi�
 
 ## Làm thế nào để sử dụng AX?
 
-* Bạn có thể thử nghiệm nhanh các tính năng của AX tại [website demo](http://demo.ocr.vn:6886/).
+* Bạn có thể thử nghiệm nhanh các tính năng của AX tại [website demo](https://ax.ocr.vn/).
 * Để tích hợp vào mã nguồn, bạn có thể chọn 1 trong 3 cách:
   1. Sử dụng trực tiếp SDK cho ngôn ngữ .NET mà chúng tôi cung cấp. _Xin vui lòng_ [_liên hệ với chúng tôi_](https://cybereye.vn/lien-he/) _nếu bạn muốn chọn phương án sử dụng này._
-  2. [Đăng ký và sử dụng qua hạ tầng Cloud của Cyber Eye.](tutorials/cyberapis.md)
-  3. [Đăng ký và sử dụng AX trên RapidAPI.](tutorials/rapidapi/)
+  2. [Đăng ký và sử dụng trên hạ tầng Cloud của Cyber Eye.](tutorials/cyberapis.md)
+  3. [Đăng ký và sử dụng trên RapidAPI.](tutorials/rapidapi/)
