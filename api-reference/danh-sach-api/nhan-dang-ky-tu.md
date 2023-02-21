@@ -8,7 +8,7 @@ description: >-
 
 ## Cài đặt API
 
-{% swagger method="post" path="/rec/img2text" baseUrl="https://ax.cyberapis.com" summary="Nhận dạng ký tự" %}
+{% swagger method="post" path="/rec/img2text" baseUrl="http://ax-api.ocr.vn" summary="Nhận dạng ký tự" %}
 {% swagger-description %}
 Nhận dạng văn bản chữ tiếng Việt
 {% endswagger-description %}

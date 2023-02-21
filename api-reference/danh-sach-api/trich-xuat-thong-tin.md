@@ -8,7 +8,7 @@ description: >-
 
 ## **Văn bản hành chính**
 
-{% swagger method="post" path="/ocr/vbhc" baseUrl="https://ax.cyberapis.com" summary="Process VBHC" %}
+{% swagger method="post" path="/ocr/vbhc" baseUrl="http://ax-api.ocr.vn" summary="Process VBHC" %}
 {% swagger-description %}
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
@@ -347,7 +347,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Chứng minh nhân dân
 
-{% swagger method="post" path="/ocr/cmnd" baseUrl="https://ax.cyberapis.com" summary="Process CMND" %}
+{% swagger method="post" path="/ocr/cmnd" baseUrl="http://ax-api.ocr.vn" summary="Process CMND" %}
 {% swagger-description %}
 API trả các thông tin như họ tên, giới tính, dân tộc, ngày sinh, hộ khẩu trường trú... của chứng minh nhân dân.
 {% endswagger-description %}
@@ -476,7 +476,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Hộ chiếu
 
-{% swagger method="post" path="/ocr/passport" baseUrl="https://ax.cyberapis.com" summary="Process Passport" %}
+{% swagger method="post" path="/ocr/passport" baseUrl="http://ax-api.ocr.vn" summary="Process Passport" %}
 {% swagger-description %}
 API trả các thông tin như mã số, số, hộ chiếu, họ tên, quốc tịch, ngày sinh, giới tính... của hộ chiếu.
 {% endswagger-description %}
@@ -761,7 +761,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Hộ tịch
 
-{% swagger method="post" path="/ocr/hotich" baseUrl="https://ax.cyberapis.com" summary="Process HoTich" %}
+{% swagger method="post" path="/ocr/hotich" baseUrl="http://ax-api.ocr.vn" summary="Process HoTich" %}
 {% swagger-description %}
 API trả các thông tin như nội bộ ban hành, số, ký hiệu, địa điểm, ngày ban hành... của văn bản hành chính.
 {% endswagger-description %}
@@ -2794,7 +2794,7 @@ Kết quả trả về có dạng **JSON** bao gồm các trường thông tin.
 
 ## Bảo hiểm oto
 
-{% swagger method="post" path="/ocr/auto-insurance" baseUrl="https://ax.cyberapis.com" summary="Process Insurance Car" %}
+{% swagger method="post" path="/ocr/auto-insurance" baseUrl="http://ax-api.ocr.vn" summary="Process Insurance Car" %}
 {% swagger-description %}
 API trả về thông tin như chủ xe, địa chỉ, điên thoại, số biển kiểm soát,... của bảo hiểm xe oto. 
 {% endswagger-description %}
