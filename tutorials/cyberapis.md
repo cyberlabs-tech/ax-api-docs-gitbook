@@ -10,7 +10,7 @@ description: Cloud-based
 
 ## Truy cập và điền thông tin đăng ký
 
-* Truy cập CyberAPIs theo đường dẫn: [https://cloud.cyberapis.com/](https://cloud.cyberapis.com/)
+* Truy cập CyberAPIs theo đường dẫn: [http://ax-cloud.ocr.vn/](https://cloud.cyberapis.com/)
 * Bạn nhập email để đăng ký tài khoản, có thể sử dụng email cá nhân hoặc doanh nghiệp. Sau đó nhấn <mark style="color:blue;">**Đăng ký tài khoản.**</mark>
 
 <figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p>Màn hình giao diện đăng ký tài khoản</p></figcaption></figure>
